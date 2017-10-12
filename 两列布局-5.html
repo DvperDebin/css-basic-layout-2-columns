@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>两列布局 - 一定宽一自适应 利用overflow</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.container{
+			width: 80%;
+			border: 10px solid red;
+		}
+		.col1{
+			width: 200px;
+			height: 600px;
+			background-color: blue;
+			float: left;
+		}
+		.col2{
+			height: 600px;
+			background-color: gray;
+			/* 字体永远不会被float所覆盖，但是其实col1还是覆盖了col2的200px
+			的宽度，利用overflow来解决覆盖问题*/
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="col1">clo1</div>
+		<!--  -->
+		<div class="col2">col2</div>
+	</div>
+</body>
+</html>

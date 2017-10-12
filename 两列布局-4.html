@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>两列布局-一定宽一适应利用定位布局方式</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.container{
+			width: 80%;
+			border: 10px solid red;
+			/* 为了让col1相对于父级绝对定位 */
+			position: relative;
+			/* 设置最小窗口大小以避免溢出 */
+			min-width: 400px;
+			margin: 0 auto;
+			
+		}
+		.col1{
+			width: 200px;
+			height: 600px;
+			background-color: lightblue;
+			/* 利用定位，此时覆盖了文档流中col2 200px的宽度*/
+			position: absolute;
+		}
+		.col2{
+			height: 600px;
+			background-color: lightpink;
+			/* 因为被覆盖了200px, 所以向右移动200px,同时是自适应宽度,所以不会溢出 */
+			margin-left: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="col1">
+			col1
+		</div>	
+		<div class="col2">
+			col2
+		</div>		
+	</div>
+</body>
+</html>

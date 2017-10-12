@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>两列布局6 - 利用display：table</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.container{
+			width: 80%;
+			border: 10px solid red;
+			margin: 0 auto;
+			/* 利用display: table来进行布局*/
+			display: table;
+			/* 布局模式，更加效率*/
+			table-layout: fixed;
+			min-width: 400px;
+		}
+		.d1,.d2{
+			/* 将d1,d2设置为表格单元格模式*/
+			display: table-cell;
+		}
+		.d1{
+			width: 200px;
+			height: 600px;
+			background-color: blue;
+		}
+		.d2{
+			height: 600px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="d1">col1</div>
+		<div class="d2">col2</div>
+	</div>
+</body>
+</html>

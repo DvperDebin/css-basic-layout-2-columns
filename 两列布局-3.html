@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>两列布局-浮动一列</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.container{
+			width: 80%;
+			border: 10px solid red;
+			background-color: lightcoral;
+		}
+		.col1{
+			width: 200px;
+			height: 600px;
+			/* 设置浮动以后，与兄弟col2不在一个面上，所以覆盖了兄弟的一部分*/
+			float: left;
+			background-color: lightblue;
+		}
+		.col2{
+			height: 600px;
+			background-color: lightseagreen;
+			/*在这里既是显示没问题，但是有100px被兄div覆盖住了*/
+			padding-left: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="col1"></div>
+		<div class="col2"></div>
+	</div>
+</body>
+</html>
